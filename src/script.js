@@ -38,9 +38,9 @@ class DashboardItem {
             </div>
           </div>
           <div class  = "view__selector">
-            <div class = "view-selector__item view-selector__item--${id}">Daily</div>
-            <div class = "view-selector__item view-selector__item--${id} view-selector__item--active">Weekly</div>
-            <div class = "view-selector__item view-selector__item--${id}">Monthly</div>
+            <div class = "view-selector__item ">Daily</div>
+            <div class = "view-selector__item  view-selector__item--active">Weekly</div>
+            <div class = "view-selector__item ">Monthly</div>
           </div>
         </div>
         <div class = "dashboard__item dashboard__item--${id}">
