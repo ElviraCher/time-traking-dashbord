@@ -31,7 +31,7 @@ class DashboardItem {
       `
         <div class = "dashboard__person">
           <div class = "info-card">
-            <img src="../images/image-jeremy.png" class = info-card__photo>
+            <img src="images/image-jeremy.png" class = info-card__photo>
             <div class="info-card__text">
               <p class="info-card__subtitle">Report for</p>
               <h1 class="info-card__title">Jeremy Robson</h1>
@@ -47,13 +47,13 @@ class DashboardItem {
           <article class="tracking-card">
             <header class="tracking-card__header">
               <h4 class="tracking-card__title">${title}</h4>
-              <img class="tracking-card__menu" src="../images/icon-ellipsis.svg" alt="menu"/>
+              <img class="tracking-card__menu" src="images/icon-ellipsis.svg" alt="menu"/>
             </header>
             <div class="tracking-card__body">
               <div class="tracking-card__time">${current}hrs</div>
               <div class="tracking-card__prev-period">Last ${
-                DashboardItem.periods[this.view]
-              } - ${previous}hrs</div>
+          DashboardItem.periods[this.view]
+      } - ${previous}hrs</div>
 
             </div>
        `
