@@ -52,8 +52,8 @@ class DashboardItem {
             <div class="tracking-card__body">
               <div class="tracking-card__time">${current}hrs</div>
               <div class="tracking-card__prev-period">Last ${
-          DashboardItem.periods[this.view]
-      } - ${previous}hrs</div>
+                DashboardItem.periods[this.view]
+              } - ${previous}hrs</div>
 
             </div>
        `
