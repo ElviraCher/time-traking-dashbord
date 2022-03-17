@@ -7,6 +7,27 @@ async function getDashboardData(url = "../data.json") {
   return data;
 }
 
+function drawPersonCard() {
+  const person = document.querySelector(".dashboard__content");
+  person.insertAdjacentHTML(
+    "beforeend",
+    `<div class = "dashboard__person">
+          <div class = "info-card">
+            <img src="images/image-jeremy.png" class = info-card__photo>
+            <div class="info-card__text">
+              <p class="info-card__subtitle">Report for</p>
+              <h1 class="info-card__title">Jeremy Robson</h1>
+            </div>
+          </div>
+          <div class  = "view__selector">
+            <div class = "view-selector__item ">Daily</div>
+            <div class = "view-selector__item  view-selector__item--active">Weekly</div>
+            <div class = "view-selector__item ">Monthly</div>
+          </div>
+        </div>`
+  );
+}
+
 class DashboardItem {
   static periods = {
     daily: "day",
@@ -29,20 +50,6 @@ class DashboardItem {
     this.container.insertAdjacentHTML(
       "beforeend",
       `
-        <div class = "dashboard__person">
-          <div class = "info-card">
-            <img src="images/image-jeremy.png" class = info-card__photo>
-            <div class="info-card__text">
-              <p class="info-card__subtitle">Report for</p>
-              <h1 class="info-card__title">Jeremy Robson</h1>
-            </div>
-          </div>
-          <div class  = "view__selector">
-            <div class = "view-selector__item ">Daily</div>
-            <div class = "view-selector__item  view-selector__item--active">Weekly</div>
-            <div class = "view-selector__item ">Monthly</div>
-          </div>
-        </div>
         <div class = "dashboard__item dashboard__item--${id}">
           <article class="tracking-card">
             <header class="tracking-card__header">
@@ -81,6 +88,7 @@ class DashboardItem {
 
 document.addEventListener("DOMContentLoaded", () => {
   getDashboardData().then((data) => {
+    drawPersonCard();
     const activities = data.map((activity) => new DashboardItem(activity));
     const selectors = document.querySelectorAll(".view-selector__item");
     selectors.forEach((selector) =>
