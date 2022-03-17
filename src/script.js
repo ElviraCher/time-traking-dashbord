@@ -1,4 +1,6 @@
 import "./style.scss";
+import photo from "./images/image-jeremy.png";
+import ellipsis from "./images/icon-ellipsis.svg";
 
 async function getDashboardData(url = "../data.json") {
   const response = await fetch(url);
@@ -13,7 +15,7 @@ function drawPersonCard() {
     "beforeend",
     `<div class = "dashboard__person">
           <div class = "info-card">
-            <img src="images/image-jeremy.png" class = info-card__photo>
+            <img src=${photo} class = info-card__photo>
             <div class="info-card__text">
               <p class="info-card__subtitle">Report for</p>
               <h1 class="info-card__title">Jeremy Robson</h1>
@@ -54,7 +56,7 @@ class DashboardItem {
           <article class="tracking-card">
             <header class="tracking-card__header">
               <h4 class="tracking-card__title">${title}</h4>
-              <img class="tracking-card__menu" src="images/icon-ellipsis.svg" alt="menu"/>
+              <img class="tracking-card__menu" src=${ellipsis} alt="menu"/>
             </header>
             <div class="tracking-card__body">
               <div class="tracking-card__time">${current}hrs</div>
