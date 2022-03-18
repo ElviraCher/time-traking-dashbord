@@ -1,8 +1,9 @@
 import "./style.scss";
 import photo from "./images/image-jeremy.png";
 import ellipsis from "./images/icon-ellipsis.svg";
+import dataUrl from "./data.json";
 
-async function getDashboardData(url = "../data.json") {
+async function getDashboardData(url = dataUrl) {
   const response = await fetch(url);
   const data = await response.json();
 
