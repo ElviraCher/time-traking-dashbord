@@ -9,7 +9,11 @@ module.exports = {
       template: "public/index.html",
     }),
     new CopyPlugin({
-      patterns: [{ from: path.resolve(__dirname, "data.json") }],
+      patterns: [
+        {
+          from: path.resolve(__dirname, "src/data.json"),
+        },
+      ],
     }),
   ],
   output: {
